@@ -1,0 +1,141 @@
+Hello, my name is Nicolas soares, I'm about to finish, I hope, the epitech curiculum and to conclude those last five years I made an internship In the societe generale company that I will present to you
+
+First I will present you the context of my,internship
+then I'll explain what is gridcomputing
+then presents the gridaudit and gridsupervisor projects
+and then conclude on my internship
+
+Société Générale is one of the main and oldest French multinational banking and financial services company, 
+it is the first french banking group.
+
+The group is 
+150 years of expertise 
+with around 150 000 collaborators through 76 countries
+in 20 15 it's gross national product was 23.5 billions €
+
+The company is a universal bank composed of 3 main pillars :
+- Retail banking
+- 	with more than 3000 agencies in france with 12 millions individual clients, 
+- 	it also offers online banking and trading prestations with boursorama bank
+	 and the website boursorama provide economical and financial informations to anyone
+
+- Corporate and Investment Banking
+- 	as the 3rd european investment bank
+	it operate on the market of shares, rates and exchanges
+	it advises on merger/acquisition and act as a commercial bank
+
+Finally with the International Banking and Financial Service
+	societe genrale offers its expertise as retail and investment banking internationaly on every continent of the world
+
+Those pillars to operate efficiently on their business cores need resources and services
+those resources are provied by the resource department RESG
+
+RESG is divided into a tree of inner divisions, 
+each branch and leaf of this tree providing a specific resource to their business partner inside the pillars, retail and investment banking in france and abroad
+
+This represent only a small fraction of all the RESG tree and we will focus on the branch I was in 
+starting by 
+
+The global technology service, it is one of the main and biggest european computing infrastructure service. 
+It covers more than 85% of the whole computing infrastructure of Société Générale
+, from workstations to computing centers and their servers including telecom and computer networks
+and counsels and assists the business lines and functional divisions for the implementation of their projects
+
+it contains the market division,
+ensuring the proper functioning of the computer infrastructure and the client relationship for its business partners from the corporate investment banking pillar
+
+then comes the Server, storage and backup division of Market
+They assure the administration, maintenance and backup of all the Market's infrastructure
+and handles several projects to ensure the proper functiioning of the production
+
+Finally there is the Grid team where I was
+
+they're in charge of handling and monitoring the grid computing platform and infrastructure
+
+The grid team is the middleware between their business partner ITEC, the department of informations and technology of the global business Service from the corporate incestment banking pillar wich provide to their own business partners the applications that will compute on the grid platform
+and the GTS departments handling the hardware and operating systems of the grid platform providing the best environment for the ITEC applications to work efficiently
+Even though the grid is composed of several different type of hardware running various operating systems,
+the ITEC application can run on them as if it was only a single giant supercomputer
+without worrying about hardware or softawre compatiblity
+
+but what is grid computing
+Grid computing is the collection of heterogeneous and affordable computer ressources from multiple locations , from desktop computers to servers in datacenters
+
+to reach a common goal requiring intensive computation by splitting this goal into small fractions spread to each node of the grid.
+By this process computations that would require large amount of time and/or supercomputers can be achieved quickly and cheaply with a robust and highly scalable environment.
+The project SETI@home of the university of california is an example of grid computing where anyone installing a softawre on their computer participate in the analisys of radio signal searching for sign of extraterrestrial intelligence. 
+
+Let's go in detail of the grid platform working
+The grid is composed of various computing ressources, mainly servers in datacenters but it also uses what is called desktop scavenging.
+Classic desktop computers of the société générale are made part of the grid when they are not used, during the night for example. Even though one by one they offer minimal computing ressources, all put together they add a substantial computing power to the grid.
+The computing ressources of the grid are glued together by middlewares
+It is those middlewares that distributes and virtualizes the compute intensives applications services and processes runned on the many nodes composing the grid platform.
+The grid platform uses different middlewares
+the symphony platform, a high-performance computing software system focused on the financial services industry.
+It can run on several operating systems like windows, linux and solaris
+and is designed to deliver scalability and enhances performance for computer-intensivve risk and analytical applications
+3 quarters or the whole grid platform is runned by symphony
+The platform load sharing facility, LSF, wich is a workload management platform and job scheduler for distributed high performance computing.
+It can execute jobs on networked unix and windows systems of many different archhitecture
+
+
+why use grid computing in Société générale
+the answer is a simple concept
+	you win when you are the first
+	more seriously
+	on the highly competitive banking world 
+	the ability to quickly and accuratly compute financial datas like financial risks and pricing gives a meaningful advantage to be a leader on the marketplace
+	and is a determinant factor in the success or fail of a trading transaction
+	To be competitive Société générale have put in place one of the largest grid computing platform in the banking environment composed of 30 clusters, of 6000 servers and 90 000 cores
+
+	With the extreme  criticality of the financial computation done on the grid platform 
+	and the need to thoses computation to be as quick and accurate as possible 
+	we can't afford to let the grid down a single second and any issue must be identified and fixed as quiclky as possible so that no issue or latency can be propagated to the end user
+	and that is where the projects I worked on come in
+	
+GridAudit and GridSupervisor
+
+
+Several tools, not only from the grid team but also from other divisions of the market departement constantly monitore the grid's server nodes and gather an enormous amount of datas about them that are available through databases and API
+
+
+Gridaudit,
+given a list of server node, 
+requests those databases and API and also directly requests the nodes with WMI request, a windows interface providing informations and control tools on systems,
+to detect and store on the grid database inconsistencies among those differents sources of informations
+gridaudit then run postchecks to detect inconsistencies and outdated datas from the previous check results and alerts directly a human by mail when needed
+
+Gridsupervisor, as for him, looks for compliance errors on the server nodes
+and alerts when errors are detected and can also directly act on the nodes if needed like closing a node and put it in maintenance mode
+
+gridsupervisor and gridaudit are .NET project, my first task was to update them from .net 3.5 to 4.5 and adapt them to match the evolution of the grid's infrastructure and tools and adpat them to the evolution of .NET.
+
+on gridaudit I implemented the requests of various API , and several checks processing their datas
+
+for gridsupervisor I created new compliance checks and modified the way compliance alerts where raised, 
+instead of alerting and logging the errors only by email, I modified the whole project, the way alerts were created and formated to store the alerts on a specific database so alerts can be monitored from the gridhome platform, 
+a website used to help developer and administrators to manage their grids.
+By doing so I significantly reduced the amount of mail by day received by the grid team members and automated a part of the grid reporting, saving them precious time increasing work effectiveness
+
+to compile, 
+this internship brought me a lot
+on the technical side, 
+I highly improved my skills in .net development and more generally in development on a windows environment
+and I discovered in detail the inner working of one of the biggest compute grid
+
+and on the personnal side
+I discovered  the work practices and environment of a massive company of the banking world
+i discovered the fundamental security side of such company,
+
+security in the main word as it define everything in something as critical as a banking company
+it defines the work processes, 
+requiring validation and cross-validation at each step of any action done on the infrastructure
+it defines also all the different hierarchie layers to ensure that no mistake or error can be propagatted to the end user
+
+working on such a gigantic group, specially a banking company was really new to me as my previous professional experiences were on startups and small companies. It allowed me to enlarge my vision of the professional world 
+
+This internship was for me the perfect conslusion to my epitech curiculum
+It fulfilled every skills i acquired through those last 5 years that define the epitech education
+technical skills and experience,
+build a teamwork mentality
+and quick learning & versatility abilities
